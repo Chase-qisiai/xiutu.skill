@@ -1,0 +1,4 @@
+interface:
+  display_name: "修图"
+  short_description: "根据图片和文字需求匹配提示词库，完成智能修图与生图任务"
+  default_prompt: "Use $xiutu to edit the uploaded image according to my request."
