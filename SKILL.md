@@ -74,7 +74,7 @@ python3 ~/.codex/skills/xiutu/scripts/sync_prompt_library.py \
 
 同步后用 `--check` 检查内容和校验信息；不要单独编辑 Skill 副本。当前不对提示词进行分类，直到用户明确要求。
 
-职场证件照提示词使用独立维护源 `职场证件照提示词库.md`；它同时是本项目的 Obsidian 笔记。修改后同步到 Skill：
+职场证件照提示词使用独立的项目维护源 `职场证件照提示词库.md`。修改后同步到 Skill：
 
 ```bash
 python3 ~/.codex/skills/xiutu/scripts/sync_prompt_library.py \
