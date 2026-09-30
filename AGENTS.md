@@ -8,6 +8,7 @@
 - 禁止只修改 Skill 副本而不回写项目维护源；同步完成后必须检查文件内容和版本/校验信息，确保两边一致。
 - 如果维护源与 Skill 副本不一致，以项目维护源为准，并重新执行同步；不要手工拼接两边的差异。
 - GitHub 公开仓库是本项目的发布镜像；本地验证通过后，再把 Skill 文件和提示词库变更提交并推送，禁止只在远端手工修改。
+- `职场证件照提示词库.md` 同时是项目维护源和本项目的 Obsidian 笔记，内含男性六套、女性六套提示词；不要另建一份内容相同但独立维护的 Obsidian 副本。
 
 同步命令：
 
@@ -22,6 +23,21 @@ python3 scripts/sync_prompt_library.py \
 python3 scripts/sync_prompt_library.py \
   --source './提示词（未整理）.md' \
   --check
+```
+
+职场证件照提示词同步到共享 Skill：
+
+```bash
+python3 scripts/sync_prompt_library.py \
+  --source './职场证件照提示词库.md' \
+  --target './references/workplace-id-photo-prompts.md' \
+  --manifest './references/workplace-id-photo-prompts.manifest.json'
+```
+
+同步后检查 Obsidian 笔记结构：
+
+```bash
+obsidian outline path='职场证件照提示词库.md' format=tree
 ```
 
 ## Skill 名称
